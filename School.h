@@ -1,3 +1,4 @@
+#include<string>
 #define Subjects 6
 class Person {
     private :

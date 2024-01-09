@@ -1,6 +1,23 @@
 #include<iostream>
 #include<string>
 #include"School.h"
+/********************* person class functions **********/
+void Person:: SetPersonName(string name ){
+
+}
+void Person::SetpersonAge(int age){
+
+} 
+string Person::GetPersonName(void){
+}
+Person:: static void IncrementStudentCount(void){
+} 
+static void IncrementEmployerCount(void){
+}
+static void DecrementStudentCount(void){
+} 
+static void DecrementEmployerCount(void){
+} 
 /************* the employer calss functions ************/
 void Employer::SetEmployerPosition(string Position ){
     this->PositionName= Position ; 
@@ -28,7 +45,7 @@ void Employer::SetAssignedSubject(string Subject){
 
  /***********************************************************/
 
- /*the student class functions*/
+ /***************** student class functions *****************/
 void Student :: SetSubjectName(string Subject , int position ){
     this ->Subject[position] = Subject ; 
 } 
