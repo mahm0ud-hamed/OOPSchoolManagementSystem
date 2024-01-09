@@ -1,22 +1,29 @@
-#include<iostream>
-#include<string>
 #include"School.h"
+using namespace std ; 
+/* static variable definition */
+int Person :: StudentCount =0 ; 
+int Person :: EmployersCount =0 ;
 /********************* person class functions **********/
 void Person:: SetPersonName(string name ){
-
+    this ->name = name ; 
 }
 void Person::SetpersonAge(int age){
-
+    this ->age = age ; 
 } 
 string Person::GetPersonName(void){
+    return this->name ; 
 }
-Person:: static void IncrementStudentCount(void){
+void Person:: IncrementStudentCount(void){
+    StudentCount ++ ; 
 } 
-static void IncrementEmployerCount(void){
+void Person:: IncrementEmployerCount(void){
+    EmployersCount++ ; 
 }
-static void DecrementStudentCount(void){
+void Person:: DecrementStudentCount(void){
+    StudentCount--;
 } 
-static void DecrementEmployerCount(void){
+void Person:: DecrementEmployerCount(void){
+    EmployersCount-- ; 
 } 
 /************* the employer calss functions ************/
 void Employer::SetEmployerPosition(string Position ){

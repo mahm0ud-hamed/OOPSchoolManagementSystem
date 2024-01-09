@@ -1,15 +1,17 @@
-#include<string>
+#include<iostream>
+#include <string>
 #define Subjects 6
 class Person {
     private :
-        string name ; 
+        std:: string name ; 
         int age ; 
-        static int StudentCount ; 
-        static int EmployersCount ; 
+
     public:
-    void SetPersonName(string name ); 
+    static int StudentCount ; 
+    static int EmployersCount ; 
+    void SetPersonName(std:: string name ); 
     void SetpersonAge(int age); 
-    string GetPersonName(void);
+    std::string GetPersonName(void);
     static void IncrementStudentCount(void); 
     static void IncrementEmployerCount(void); 
     static void DecrementStudentCount(void); 
@@ -18,13 +20,13 @@ class Person {
 
 class Employer :public Person{
     private: 
-    string PositionName ; 
-    string Department; 
-    string AssingnedSubject ; 
-    public : 
-    void SetEmployerPosition(string Position );
-    void SetEmployerDepartment(string Department );
-    void SetAssignedSubject(string Subject);
+    std::string PositionName ; 
+    std::string Department; 
+    std::string AssingnedSubject ; 
+    public :
+    void SetEmployerPosition(std:: string Position );
+    void SetEmployerDepartment(std::string Department );
+    void SetAssignedSubject(std::string Subject);
     string GetEmployerPosition(void);
     string GetEmployerDepartment(void );
     string GetAssignedSubject(void);
@@ -34,14 +36,14 @@ class Employer :public Person{
 
 class Student : public Person{
     private :  
-    string Subject[Subjects]; 
+   std:: string Subject[Subjects]; 
     int SubjectScore[Subjects]; 
     public: 
-    void SetSubjectName(string Subject, int position); 
+    void SetSubjectName(std::string Subject, int position); 
     void SetSubjectScore(int Score, int position); 
-    void SetSubjectsName(string Subject[]); 
+    void SetSubjectsName(std::string Subject[]); 
     void SetSubjectsScore(int Score[]); 
     int  GetSubjectScore( int Position); 
-    string GetsubjectName(int position); 
+   std:: string GetsubjectName(int position); 
 
 };
