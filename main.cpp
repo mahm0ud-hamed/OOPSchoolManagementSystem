@@ -4,5 +4,6 @@ using namespace std ;
 
 
 int main(){
+	EmployerNode();
 	cout<<"hello world"<<endl; 
 }

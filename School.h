@@ -1,10 +1,13 @@
 #include<iostream>
 #include <string>
 #define Subjects 6
+
+/* class person the parent class */
 class Person {
     private :
         std:: string name ; 
-        int age ; 
+        int age ;
+        int ID ;  
 
     public:
         Person* PersonNext ; 
@@ -12,13 +15,17 @@ class Person {
     static int EmployersCount ; 
     void SetPersonName(std:: string name ); 
     void SetpersonAge(int age); 
+    void SetPersonID(int ID);
     std::string GetPersonName(void);
     static void IncrementStudentCount(void); 
     static void IncrementEmployerCount(void); 
     static void DecrementStudentCount(void); 
     static void DecrementEmployerCount(void); 
+    Person();
+    
 };
 
+/* employer calss inherite from the person class a public inheritance */
 class Employer :public Person{
     private: 
     std::string PositionName ; 
@@ -36,6 +43,7 @@ class Employer :public Person{
 
 };
 
+/* student class inherite from person class public inheritance  */
 class Student : public Person{
     private :  
    std:: string Subject[Subjects]; 
@@ -53,19 +61,25 @@ class Student : public Person{
 };
 
 /* linked lsit functions */
+
 /* adding  creation */
-Employer* CreateNewEmployer(void); 
-Student* CreateNewStudent(void); 
+Employer* EmployerNode(void); 
+Student* StudentNode(void); 
+void createEmployer(Employer* NewEmployer); 
+void createStudent(Student* NewStudent); 
+
 
 /*deleting functions */
-void DeleteStudent(Student* StudentList , string name); 
-void DeleteEmployer(Student* EmployerList , string name); 
+void DeleteStudent(Student* StudentList , std::string name); 
+void DeleteEmployer(Student* EmployerList , std::string name); 
 
 /*showing*/
-void ShowStudent(Student* StudentList , string name);
+void ShowStudent(Student* StudentList , std::string name);
 void ShowAllStudents(Student* StudentList); 
-void ShowEmployer(Employer* EmployerList, string name);
+void ShowEmployer(Employer* EmployerList, std::string name);
 void ShowAllEmployers(Employer * EmployerList) ;
 
 /* editing functions */
+void EditEmployer (int EmployerID);
+void EditStudent(int StudentID); 
 

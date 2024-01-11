@@ -4,6 +4,10 @@ using namespace std ;
 int Person :: StudentCount =0 ; 
 int Person :: EmployersCount =0 ;
 /********************* person class functions **********/
+ /* person constructor*/
+Person:: Person(){
+        std:: cin>>name ; 
+} 
 void Person:: SetPersonName(string name ){
     this ->name = name ; 
 }
@@ -25,6 +29,11 @@ void Person:: DecrementStudentCount(void){
 void Person:: DecrementEmployerCount(void){
     EmployersCount-- ; 
 } 
+
+void Person:: SetPersonID(int ID){
+    this->ID = ID;
+}
+
 /************* the employer calss functions ************/
 void Employer::SetEmployerPosition(string Position ){
     this->PositionName= Position ; 
