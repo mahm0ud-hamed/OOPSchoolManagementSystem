@@ -6,7 +6,7 @@ int Person :: EmployersCount =0 ;
 /********************* person class functions **********/
  /* person constructor*/
 Person:: Person(){
-        std:: cin>>name ; 
+    std:: cout<<"welcome in my linked list schoole management system"<<std::endl;  
 } 
 void Person:: SetPersonName(string name ){
     this ->name = name ; 
@@ -32,6 +32,7 @@ void Person:: DecrementEmployerCount(void){
 
 void Person:: SetPersonID(int ID){
     this->ID = ID;
+    
 }
 
 /************* the employer calss functions ************/
