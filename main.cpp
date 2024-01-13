@@ -1,9 +1,12 @@
 #include<iostream>
-#include"School.h"
+#include"LinkedList.h"
 using namespace std ;
 
-
+extern Employer* Ehead ; 
+extern Student*  Shead ;
 int main(){
-	EmployerNode();
-	cout<<"hello world"<<endl; 
+	
+	createEmployer(EmployerNode());
+	//createEmployer(EmployerNode());
+	ShowEmployer(Ehead,"mahmoud");
 }

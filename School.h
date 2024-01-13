@@ -10,12 +10,14 @@ class Person {
         int ID ;  
 
     public:
-        Person* PersonNext ; 
+       // Person* PersonNext ; 
     static int StudentCount ; 
     static int EmployersCount ; 
     void SetPersonName(std:: string name ); 
     void SetpersonAge(int age); 
     void SetPersonID(int ID);
+    int  GetPersonAge(void) ; 
+    int  GetPersonID(void);
     std::string GetPersonName(void);
     static void IncrementStudentCount(void); 
     static void IncrementEmployerCount(void); 
@@ -60,26 +62,4 @@ class Student : public Person{
 
 };
 
-/* linked lsit functions */
-
-/* adding  creation */
-Employer* EmployerNode(void); 
-Student* StudentNode(void); 
-void createEmployer(Employer* NewEmployer); 
-void createStudent(Student* NewStudent); 
-
-
-/*deleting functions */
-void DeleteStudent(Student* StudentList , std::string name); 
-void DeleteEmployer(Student* EmployerList , std::string name); 
-
-/*showing*/
-void ShowStudent(Student* StudentList , std::string name);
-void ShowAllStudents(Student* StudentList); 
-void ShowEmployer(Employer* EmployerList, std::string name);
-void ShowAllEmployers(Employer * EmployerList) ;
-
-/* editing functions */
-void EditEmployer (int EmployerID);
-void EditStudent(int StudentID); 
 

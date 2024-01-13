@@ -3,11 +3,12 @@ using namespace std ;
 /* static variable definition */
 int Person :: StudentCount =0 ; 
 int Person :: EmployersCount =0 ;
-/********************* person class functions **********/
+/********************* person class functions implementation  **********/
  /* person constructor*/
 Person:: Person(){
     std:: cout<<"welcome in my linked list schoole management system"<<std::endl;  
 } 
+/* functions */
 void Person:: SetPersonName(string name ){
     this ->name = name ; 
 }
@@ -33,6 +34,12 @@ void Person:: DecrementEmployerCount(void){
 void Person:: SetPersonID(int ID){
     this->ID = ID;
     
+}
+int Person:: GetPersonAge(void){
+    return this->age; 
+} 
+int Person::GetPersonID(void){
+    return this->ID ; 
 }
 
 /************* the employer calss functions ************/
@@ -72,6 +79,7 @@ void Student:: SetSubjectScore(int Score , int position){
 void Student:: SetSubjectsName(string Subject[]){
     int i =0 ; 
     while(i < Subjects ){
+        cin>>Subject[i];
         this->Subject[i] = Subject[i];
         i++ ;
     }
@@ -80,6 +88,7 @@ void Student:: SetSubjectsName(string Subject[]){
 void Student:: SetSubjectsScore(int Score[]){
     int i =0 ; 
     while(i < Subjects ){
+        cin>>Score[i];
         this->SubjectScore[i] = Score[i];
         i++ ;
     }
